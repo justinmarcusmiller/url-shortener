@@ -77,6 +77,9 @@
   color: hsl(0, 0%, 75%);
   text-decoration: none;
 }
+#footer a:hover {
+  color: white;
+}
 #social-links {
   display: flex;
 }
