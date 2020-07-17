@@ -60,7 +60,9 @@ export default {
 
 <style>
 #body {
-  margin: 25px;
+  max-width: 1440px;
+  margin: 25px auto;
+  padding: 0 25px;
 }
 #cta {
   display: flex;

@@ -25,7 +25,9 @@
 #header {
   display: flex;
   justify-content: space-between;
-  margin: 25px;
+  margin: 25px auto;
+  max-width: 1440px;
+  padding: 0 25px;
 }
 #header-left {
   display: flex;
