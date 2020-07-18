@@ -13,7 +13,7 @@
     </div>
     <LinkGenerator />
     <div id="heading">
-      <h2>Advanded Statistics</h2>
+      <h2>Advanced Statistics</h2>
       <p>
         Track how your links are performing across the web with our advanced
         statistics dashboard.
@@ -21,6 +21,7 @@
     </div>
     <div id="stats-articles">
       <article id="brand" class="stat-article">
+        <img id="brand-icon" class="article-icon" />
         <h3>Brand Recognition</h3>
         <p>
           Boots your brand recognition with each click. Generic links don't mean
@@ -28,6 +29,7 @@
         </p>
       </article>
       <article id="records" class="stat-article">
+        <img id="records-icon" class="article-icon" />
         <h3>Detailed Records</h3>
         <p>
           Gain insights into who is clicking your links. Knowing when and where
@@ -35,6 +37,7 @@
         </p>
       </article>
       <article id="custom" class="stat-article">
+        <img id="custom-icon" class="article-icon" />
         <h3>Fully Customizable</h3>
         <p>
           Improve brand awareness and content discoverability through
@@ -69,11 +72,14 @@ export default {
   justify-content: space-between;
   max-width: 100vw;
   align-items: center;
+  height: 700px;
 }
 
 #cta-img {
   height: 45vw;
   width: 45vw;
+  max-width: 600px;
+  max-height: 600px;
   margin: auto;
   background-image: url("../assets/illustration-working.svg");
   background-position: left;
@@ -94,6 +100,66 @@ export default {
   font-size: 16px;
   padding: 10px 20px;
   margin-top: 15px;
+}
+
+#heading {
+  text-align: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#heading h2 {
+  font-size: 32px;
+}
+
+#heading p {
+  font-weight: 700;
+  color: hsl(257, 7%, 63%);
+}
+
+#stats-articles {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+#stats-articles article {
+  width: 25%;
+}
+
+#stats-articles article h3 {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+#brand {
+  transform: translateY(-50px);
+}
+
+#custom {
+  transform: translateY(50px);
+}
+
+.article-icon {
+  background-color: hsl(257, 27%, 26%);
+  background-repeat:no-repeat;
+  background-position: center;
+  padding: 35px;
+  border-radius: 100%;
+}
+
+#brand-icon {
+  background-image: url('../assets/icon-brand-recognition.svg');
+}
+
+#records-icon {
+  background-image: url('../assets/icon-detailed-records.svg');
+}
+
+#custom-icon {
+  background-image: url('../assets/icon-fully-customizable.svg');
 }
 
 </style>
