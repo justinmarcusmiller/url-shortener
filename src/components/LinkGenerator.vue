@@ -103,7 +103,7 @@ export default {
     border-radius: 10px;
     font-size: 18px;
     padding: 15px 30px;
-    flex-grow: 1;
+    flex-grow: .5;
     margin: 25px;
   }
   #link-form input {
