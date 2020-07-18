@@ -5,10 +5,11 @@
       <button id="url-submit-btn" >Shorten It!</button>
     </form>
     <div id="link-list">
-      <div class="saved-link" v-for="link in links" :key="link.url">
+      <div class="saved-link" v-for="link in links" :key="link.hashid">
         <p>{{ link.url }}</p>
-        <p :id=link.url>https://rel.ink/{{ link.hashid }}</p>
-        <button class="copy-btn" @click="copyLink(`https://rel.ink/` + link.hashid)">Copy Link</button>
+        <p>https://rel.ink/{{ link.hashid}}</p>
+        <textarea :id=link.url :value="'https://rel.ink/' + link.hashid" ></textarea>
+        <button class="copy-btn" @click="copyLink(link.url)">Copy Link</button>
       </div>
     </div>
   </div>
@@ -49,10 +50,9 @@ export default {
           'Content-Type': 'application/JSON'
         })
       });
-      console.log(request)
-      console.log(link)
+      //console.log(request)
+      //console.log(link)
       //console.log({"hashid": this.hashid,"url": this.url})
-      //this.links.push({"url":"google.com","hashid":"RgeNko"})
       fetch(request)
         .then(res => res.json())
         //.then(res => console.log(res))
@@ -71,7 +71,14 @@ export default {
       console.log("saved Links");
       console.log(localStorage.links)
     },
-    copyLink(){
+    copyLink(id){
+      let el = document.getElementById(id);
+      //console.log(el.textContent);
+      el.select();
+      el.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+      alert("Copied the text: " + el.value)
+      //console.log(el);
     }
   }
 }
@@ -129,5 +136,9 @@ export default {
     font-size: 16px;
     padding: 10px 20px;
     margin: 25px;
+  }
+
+  .saved-link textarea {
+    display: none;
   }
 </style>
