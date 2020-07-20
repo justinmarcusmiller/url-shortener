@@ -67,6 +67,9 @@
   height: 200px;
   color: hsl(0, 0%, 100%);
 }
+#footer h2 {
+  font-size: 32px;
+}
 #footer li:first-of-type {
   margin-bottom: 15px;
 }
@@ -114,5 +117,26 @@
 #instagram-btn {
   -webkit-mask-image: url("../assets/icon-instagram.svg");
   mask-image: url("../assets/icon-instagram.svg");
+}
+
+@media only screen and (max-width: 600px) {
+  #footer {
+    height: unset;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  #footer h2 {
+    margin-bottom: 50px;
+  }
+  #footer ul {
+    margin-bottom: 50px;
+  }
+  #footer ul li{
+    margin-bottom: 10px;
+  }
+  #social-links {
+    margin-bottom: 50px;
+  }
 }
 </style>

@@ -31,4 +31,10 @@
   padding: 15px 25px;
   margin-top: 25px;
 }
+
+@media only screen and (max-width: 600px) {
+  #boost-cta {
+    height: 250px;
+  }
+}
 </style>

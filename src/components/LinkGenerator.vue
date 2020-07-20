@@ -124,7 +124,7 @@ export default {
   flex-grow: 3;
   margin: 45px;
   padding: 15px 0;
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
   border: none;
   padding-left: 15px;
@@ -159,6 +159,18 @@ input[type="url" i] {
   #link-form {
     flex-direction: column;
     height: 200px;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  #link-form input {
+    margin: 0;
+    flex-grow: unset;
+    width: 90%;
+  }
+  #link-form button {
+    flex-grow: unset;
+    margin: 0;
+    width: 90%;
   }
 }
 </style>

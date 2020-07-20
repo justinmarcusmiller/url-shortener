@@ -66,6 +66,7 @@ export default {
   max-width: 1440px;
   margin: 25px auto;
   padding: 0 25px;
+  color: hsl(260, 8%, 14%);
 }
 #cta {
   display: flex;
@@ -125,11 +126,11 @@ export default {
   padding: 100px 0;
 }
 
-#stats-articles article {
+.stat-article {
   width: 25%;
 }
 
-#stats-articles article h3 {
+.stat-article h3 {
   margin-bottom: 15px;
   margin-top: 5px;
 }
@@ -162,4 +163,41 @@ export default {
   background-image: url('../assets/icon-fully-customizable.svg');
 }
 
+@media only screen and (max-width: 600px) {
+  #cta {
+    height: unset;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  #cta-text {
+    max-width: unset;
+    text-align: center;
+    margin: 25px 0;
+  }
+  #cta-text h1 {
+    line-height: 42px;
+    font-size: 42px;
+    margin: 15px 0;
+  }
+  #cta-text p {
+    margin-bottom: 10px;
+  }
+  #cta-img {
+    max-width: unset;
+    max-height: unset;
+    width: 75vw;
+    height: 75vw;
+  }
+  #cta-btn {
+    border-radius: 100px;
+    padding: 15px 30px;
+  }
+  #stats-articles {
+    flex-direction: column;
+  }
+  .stat-article {
+    width: 100%;
+    text-align: center;
+  }
+}
 </style>
