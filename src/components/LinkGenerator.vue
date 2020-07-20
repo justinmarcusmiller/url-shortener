@@ -16,7 +16,7 @@
           :id="link.url"
           :value="'https://rel.ink/' + link.hashid"
         ></textarea>
-        <button class="copy-btn" @click="copyLink(link.url)">Copy Link</button>
+        <button class="copy-btn" readonly @click="copyLink(link.url)">Copy Link</button>
       </div>
     </div>
   </div>
@@ -146,7 +146,13 @@ input[type="url" i] {
 }
 
 .saved-link textarea {
-  display: none;
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border: none;
 }
 
 @media only screen and (max-width: 600px) {
