@@ -72,4 +72,10 @@
   font-size: 16px;
   padding: 10px 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  #header {
+    display: none;
+  }
+}
 </style>

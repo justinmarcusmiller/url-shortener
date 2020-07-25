@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Header />
+    <HeaderMobile/>
+    <Header/>
     <Body />
     <BoostCTA />
     <Footer />
@@ -9,6 +10,7 @@
 
 <script>
 import Header from './components/Header.vue'
+import HeaderMobile from './components/HeaderMobile.vue'
 import Body from './components/Body.vue'
 import Footer from './components/Footer.vue'
 import BoostCTA from './components/BoostCTA.vue'
@@ -17,6 +19,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    HeaderMobile,
     Body,
     Footer,
     BoostCTA
@@ -37,6 +40,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 button:hover {
   opacity: 0.8;
