@@ -155,6 +155,10 @@ input[type="url" i] {
   border: none;
 }
 
+.saved-link p:last-of-type{
+  color: hsl(180, 66%, 49%);
+}
+
 @media only screen and (max-width: 600px) {
   #link-form {
     flex-direction: column;
@@ -171,6 +175,14 @@ input[type="url" i] {
     flex-grow: unset;
     margin: 0;
     width: 90%;
+  }
+  .saved-link {
+    flex-direction: column;
+    height: 150px;
+    margin: 50px;
+  }
+  .copy-btn {
+    margin: 0;
   }
 }
 </style>
